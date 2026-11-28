@@ -13,6 +13,7 @@ A console ATM written in Python. The user logs in with a PIN and then uses a men
 - Invalid menu options are rejected and the menu is shown again.
 - Operation counter shown when the user exits. It counts balance checks and completed deposits and withdrawals. Rejected operations are not counted.
 - Format amounts with two decimals (`:.2f`).
+- Add a withdrawal limit per operation.
 
 ## How to run
 
@@ -20,7 +21,7 @@ A console ATM written in Python. The user logs in with a PIN and then uses a men
 python cash_machine.py
 ```
 
-Demo PIN: `1234`. Starting balance: `100.0`.
+Demo PIN: `1234`. Starting balance: `1000.0`.
 
 ## Example
 
@@ -29,8 +30,8 @@ Ingrese el pin: 1234
 Bienvenido/a
 
 Elija una opción: 2
-Ingrese el monto a depositar: 50
-Su nuevo saldo es 150.0
+Ingrese el monto a depositar: 100
+Su nuevo saldo es 1100.00
 
 Elija una opción: 4
 ¡Gracias por usar Next Level!
@@ -55,7 +56,7 @@ The program runs in two steps, one after the other:
 
 ## Possible improvements
 
-- Add a withdrawal limit per operation.
+- Make the limit a daily limit
 - Move the amount validation into a function once I learn functions, since it is repeated for deposits and withdrawals.
 - Handle invalid input with `try/except` once I learn error handling.
 
