@@ -12,6 +12,7 @@ A console ATM written in Python. The user logs in with a PIN and then uses a men
 - Withdrawals cannot exceed the available balance.
 - Invalid menu options are rejected and the menu is shown again.
 - Operation counter shown when the user exits. It counts balance checks and completed deposits and withdrawals. Rejected operations are not counted.
+- Format amounts with two decimals (`:.2f`).
 
 ## How to run
 
@@ -54,7 +55,6 @@ The program runs in two steps, one after the other:
 
 ## Possible improvements
 
-- Format amounts with two decimals (`:.2f`).
 - Add a withdrawal limit per operation.
 - Move the amount validation into a function once I learn functions, since it is repeated for deposits and withdrawals.
 - Handle invalid input with `try/except` once I learn error handling.
