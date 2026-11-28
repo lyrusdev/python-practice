@@ -1,7 +1,8 @@
 
 # Console ATM: asks for a PIN (3 attempts), then shows a menu
 # to check balance, deposit and withdraw money.
-balance = 100.0
+balance = 1000.0
+WITHDRAWAL_LIMIT = 200.0
 operations_count = 0
 option = "0"
 
@@ -64,12 +65,14 @@ while is_logged and option != "4":
 
             if withdraw <= 0:
                 print("Monto inválido")
-            elif withdraw <= balance:
+            elif withdraw > balance:
+                print("Saldo insuficiente, revise su saldo")
+            elif withdraw > WITHDRAWAL_LIMIT:
+                print(f"Monto superior al límite de ${WITHDRAWAL_LIMIT}")
+            else:
                 balance -= withdraw
                 print(f"Su saldo restante es {balance:.2f}")
-                operations_count += 1
-            else:
-                print("Saldo insuficiente, revise su saldo")
+                operations_count += 1    
         else:
             print("Ingreso no válido")
     elif option == "4":
