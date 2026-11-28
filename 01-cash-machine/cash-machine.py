@@ -37,7 +37,7 @@ while is_logged and option != "4":
     option = input("Elija una opción: ")
     
     if option == "1":
-        print(f"Su saldo actual es {balance}")
+        print(f"Su saldo actual es {balance:.2f}")
         operations_count += 1
     elif option == "2":
         deposit = input("Ingrese el monto a depositar: ")
@@ -51,7 +51,7 @@ while is_logged and option != "4":
                 print("Monto inválido")
             else:    
                 balance += deposit
-                print(f"Su nuevo saldo es {balance}")
+                print(f"Su nuevo saldo es {balance:.2f}")
                 operations_count += 1
         else:
             print("Ingreso no válido")
@@ -66,7 +66,7 @@ while is_logged and option != "4":
                 print("Monto inválido")
             elif withdraw <= balance:
                 balance -= withdraw
-                print(f"Su saldo restante es {balance}")
+                print(f"Su saldo restante es {balance:.2f}")
                 operations_count += 1
             else:
                 print("Saldo insuficiente, revise su saldo")
